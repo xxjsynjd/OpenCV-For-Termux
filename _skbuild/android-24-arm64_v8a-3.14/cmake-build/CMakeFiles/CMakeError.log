@@ -1,0 +1,196 @@
+Compilation failed:
+    source file: '/data/data/com.termux/files/home/opencv-python/opencv/cmake/checks/cpu_sve.cpp'
+    check option: ''
+===== BUILD LOG =====
+Change Dir: '/data/data/com.termux/files/home/opencv-python/_skbuild/android-24-arm64_v8a-3.14/cmake-build/CMakeFiles/CMakeTmp'
+
+Run Build Command(s): /data/data/com.termux/files/usr/bin/ninja -v cmTC_0913a
+[1/2] /data/data/com.termux/files/usr/bin/c++   -O3 -DNDEBUG -std=c++11 -fPIE -MD -MT CMakeFiles/cmTC_0913a.dir/cpu_sve.cpp.o -MF CMakeFiles/cmTC_0913a.dir/cpu_sve.cpp.o.d -o CMakeFiles/cmTC_0913a.dir/cpu_sve.cpp.o -c /data/data/com.termux/files/home/opencv-python/opencv/cmake/checks/cpu_sve.cpp
+FAILED: [code=1] CMakeFiles/cmTC_0913a.dir/cpu_sve.cpp.o 
+/data/data/com.termux/files/usr/bin/c++   -O3 -DNDEBUG -std=c++11 -fPIE -MD -MT CMakeFiles/cmTC_0913a.dir/cpu_sve.cpp.o -MF CMakeFiles/cmTC_0913a.dir/cpu_sve.cpp.o.d -o CMakeFiles/cmTC_0913a.dir/cpu_sve.cpp.o -c /data/data/com.termux/files/home/opencv-python/opencv/cmake/checks/cpu_sve.cpp
+/data/data/com.termux/files/home/opencv-python/opencv/cmake/checks/cpu_sve.cpp:17:2: error: "SVE is not supported"
+   17 | #error "SVE is not supported"
+      |  ^
+/data/data/com.termux/files/home/opencv-python/opencv/cmake/checks/cpu_sve.cpp:22:18: error: use of undeclared identifier 'test'
+   22 |   printf("%d\n", test());
+      |                  ^~~~
+2 errors generated.
+ninja: build stopped: subcommand failed.
+
+
+===== END =====
+
+Compilation failed:
+    source file: '/data/data/com.termux/files/home/opencv-python/opencv/cmake/checks/cpu_neon_dotprod.cpp'
+    check option: ''
+===== BUILD LOG =====
+Change Dir: '/data/data/com.termux/files/home/opencv-python/_skbuild/android-24-arm64_v8a-3.14/cmake-build/CMakeFiles/CMakeTmp'
+
+Run Build Command(s): /data/data/com.termux/files/usr/bin/ninja -v cmTC_f478d
+[1/2] /data/data/com.termux/files/usr/bin/c++   -O3 -DNDEBUG -std=c++11 -fPIE -MD -MT CMakeFiles/cmTC_f478d.dir/cpu_neon_dotprod.cpp.o -MF CMakeFiles/cmTC_f478d.dir/cpu_neon_dotprod.cpp.o.d -o CMakeFiles/cmTC_f478d.dir/cpu_neon_dotprod.cpp.o -c /data/data/com.termux/files/home/opencv-python/opencv/cmake/checks/cpu_neon_dotprod.cpp
+FAILED: [code=1] CMakeFiles/cmTC_f478d.dir/cpu_neon_dotprod.cpp.o 
+/data/data/com.termux/files/usr/bin/c++   -O3 -DNDEBUG -std=c++11 -fPIE -MD -MT CMakeFiles/cmTC_f478d.dir/cpu_neon_dotprod.cpp.o -MF CMakeFiles/cmTC_f478d.dir/cpu_neon_dotprod.cpp.o.d -o CMakeFiles/cmTC_f478d.dir/cpu_neon_dotprod.cpp.o -c /data/data/com.termux/files/home/opencv-python/opencv/cmake/checks/cpu_neon_dotprod.cpp
+/data/data/com.termux/files/home/opencv-python/opencv/cmake/checks/cpu_neon_dotprod.cpp:14:24: error: always_inline function 'vdotq_u32' requires target feature 'dotprod', but would be inlined into function 'test' that is compiled without support for 'dotprod'
+   14 |     uint32x4_t v_dst = vdotq_u32(v_src, v_m0, v_m1);
+      |                        ^
+1 error generated.
+ninja: build stopped: subcommand failed.
+
+
+===== END =====
+
+Compilation failed:
+    source file: '/data/data/com.termux/files/home/opencv-python/opencv/cmake/checks/cpu_neon_fp16.cpp'
+    check option: ''
+===== BUILD LOG =====
+Change Dir: '/data/data/com.termux/files/home/opencv-python/_skbuild/android-24-arm64_v8a-3.14/cmake-build/CMakeFiles/CMakeTmp'
+
+Run Build Command(s): /data/data/com.termux/files/usr/bin/ninja -v cmTC_6bedc
+[1/2] /data/data/com.termux/files/usr/bin/c++   -O3 -DNDEBUG -std=c++11 -fPIE -MD -MT CMakeFiles/cmTC_6bedc.dir/cpu_neon_fp16.cpp.o -MF CMakeFiles/cmTC_6bedc.dir/cpu_neon_fp16.cpp.o.d -o CMakeFiles/cmTC_6bedc.dir/cpu_neon_fp16.cpp.o -c /data/data/com.termux/files/home/opencv-python/opencv/cmake/checks/cpu_neon_fp16.cpp
+FAILED: [code=1] CMakeFiles/cmTC_6bedc.dir/cpu_neon_fp16.cpp.o 
+/data/data/com.termux/files/usr/bin/c++   -O3 -DNDEBUG -std=c++11 -fPIE -MD -MT CMakeFiles/cmTC_6bedc.dir/cpu_neon_fp16.cpp.o -MF CMakeFiles/cmTC_6bedc.dir/cpu_neon_fp16.cpp.o.d -o CMakeFiles/cmTC_6bedc.dir/cpu_neon_fp16.cpp.o -c /data/data/com.termux/files/home/opencv-python/opencv/cmake/checks/cpu_neon_fp16.cpp
+/data/data/com.termux/files/home/opencv-python/opencv/cmake/checks/cpu_neon_fp16.cpp:28:21: error: always_inline function 'vsubq_f16' requires target feature 'fullfp16', but would be inlined into function 'test' that is compiled without support for 'fullfp16'
+   28 |     float16x8_t d = vsubq_f16(s1, s1);
+      |                     ^
+/data/data/com.termux/files/home/opencv-python/opencv/cmake/checks/cpu_neon_fp16.cpp:29:9: error: '__builtin_neon_vfmaq_laneq_f16' needs target feature fullfp16,neon
+   29 |     d = vfmaq_laneq_f16(d, s1, s2, 0);
+      |         ^
+/data/data/com.termux/files/usr/lib/clang/21/include/arm_neon.h:45179:43: note: expanded from macro 'vfmaq_laneq_f16'
+ 45179 |   __ret = __builtin_bit_cast(float16x8_t, __builtin_neon_vfmaq_laneq_f16(__builtin_bit_cast(int8x16_t, __s0), __builtin_bit_cast(int8x16_t, __s1), __builtin_bit_cast(int8x16_t, __s2), __p3, 40)); \
+       |                                           ^
+/data/data/com.termux/files/home/opencv-python/opencv/cmake/checks/cpu_neon_fp16.cpp:30:9: error: '__builtin_neon_vfmaq_laneq_f16' needs target feature fullfp16,neon
+   30 |     d = vfmaq_laneq_f16(d, s1, s2, 1);
+      |         ^
+/data/data/com.termux/files/usr/lib/clang/21/include/arm_neon.h:45179:43: note: expanded from macro 'vfmaq_laneq_f16'
+ 45179 |   __ret = __builtin_bit_cast(float16x8_t, __builtin_neon_vfmaq_laneq_f16(__builtin_bit_cast(int8x16_t, __s0), __builtin_bit_cast(int8x16_t, __s1), __builtin_bit_cast(int8x16_t, __s2), __p3, 40)); \
+       |                                           ^
+/data/data/com.termux/files/home/opencv-python/opencv/cmake/checks/cpu_neon_fp16.cpp:31:9: error: '__builtin_neon_vfmaq_laneq_f16' needs target feature fullfp16,neon
+   31 |     d = vfmaq_laneq_f16(d, s1, s2, 2);
+      |         ^
+/data/data/com.termux/files/usr/lib/clang/21/include/arm_neon.h:45179:43: note: expanded from macro 'vfmaq_laneq_f16'
+ 45179 |   __ret = __builtin_bit_cast(float16x8_t, __builtin_neon_vfmaq_laneq_f16(__builtin_bit_cast(int8x16_t, __s0), __builtin_bit_cast(int8x16_t, __s1), __builtin_bit_cast(int8x16_t, __s2), __p3, 40)); \
+       |                                           ^
+/data/data/com.termux/files/home/opencv-python/opencv/cmake/checks/cpu_neon_fp16.cpp:32:9: error: '__builtin_neon_vfmaq_laneq_f16' needs target feature fullfp16,neon
+   32 |     d = vfmaq_laneq_f16(d, s1, s2, 3);
+      |         ^
+/data/data/com.termux/files/usr/lib/clang/21/include/arm_neon.h:45179:43: note: expanded from macro 'vfmaq_laneq_f16'
+ 45179 |   __ret = __builtin_bit_cast(float16x8_t, __builtin_neon_vfmaq_laneq_f16(__builtin_bit_cast(int8x16_t, __s0), __builtin_bit_cast(int8x16_t, __s1), __builtin_bit_cast(int8x16_t, __s2), __p3, 40)); \
+       |                                           ^
+/data/data/com.termux/files/home/opencv-python/opencv/cmake/checks/cpu_neon_fp16.cpp:33:9: error: '__builtin_neon_vfmaq_laneq_f16' needs target feature fullfp16,neon
+   33 |     d = vfmaq_laneq_f16(d, s1, s2, 4);
+      |         ^
+/data/data/com.termux/files/usr/lib/clang/21/include/arm_neon.h:45179:43: note: expanded from macro 'vfmaq_laneq_f16'
+ 45179 |   __ret = __builtin_bit_cast(float16x8_t, __builtin_neon_vfmaq_laneq_f16(__builtin_bit_cast(int8x16_t, __s0), __builtin_bit_cast(int8x16_t, __s1), __builtin_bit_cast(int8x16_t, __s2), __p3, 40)); \
+       |                                           ^
+/data/data/com.termux/files/home/opencv-python/opencv/cmake/checks/cpu_neon_fp16.cpp:34:9: error: '__builtin_neon_vfmaq_laneq_f16' needs target feature fullfp16,neon
+   34 |     d = vfmaq_laneq_f16(d, s1, s2, 5);
+      |         ^
+/data/data/com.termux/files/usr/lib/clang/21/include/arm_neon.h:45179:43: note: expanded from macro 'vfmaq_laneq_f16'
+ 45179 |   __ret = __builtin_bit_cast(float16x8_t, __builtin_neon_vfmaq_laneq_f16(__builtin_bit_cast(int8x16_t, __s0), __builtin_bit_cast(int8x16_t, __s1), __builtin_bit_cast(int8x16_t, __s2), __p3, 40)); \
+       |                                           ^
+/data/data/com.termux/files/home/opencv-python/opencv/cmake/checks/cpu_neon_fp16.cpp:35:9: error: '__builtin_neon_vfmaq_laneq_f16' needs target feature fullfp16,neon
+   35 |     d = vfmaq_laneq_f16(d, s1, s2, 6);
+      |         ^
+/data/data/com.termux/files/usr/lib/clang/21/include/arm_neon.h:45179:43: note: expanded from macro 'vfmaq_laneq_f16'
+ 45179 |   __ret = __builtin_bit_cast(float16x8_t, __builtin_neon_vfmaq_laneq_f16(__builtin_bit_cast(int8x16_t, __s0), __builtin_bit_cast(int8x16_t, __s1), __builtin_bit_cast(int8x16_t, __s2), __p3, 40)); \
+       |                                           ^
+/data/data/com.termux/files/home/opencv-python/opencv/cmake/checks/cpu_neon_fp16.cpp:36:9: error: '__builtin_neon_vfmaq_laneq_f16' needs target feature fullfp16,neon
+   36 |     d = vfmaq_laneq_f16(d, s1, s2, 7);
+      |         ^
+/data/data/com.termux/files/usr/lib/clang/21/include/arm_neon.h:45179:43: note: expanded from macro 'vfmaq_laneq_f16'
+ 45179 |   __ret = __builtin_bit_cast(float16x8_t, __builtin_neon_vfmaq_laneq_f16(__builtin_bit_cast(int8x16_t, __s0), __builtin_bit_cast(int8x16_t, __s1), __builtin_bit_cast(int8x16_t, __s2), __p3, 40)); \
+       |                                           ^
+9 errors generated.
+ninja: build stopped: subcommand failed.
+
+
+===== END =====
+
+Compilation failed:
+    source file: '/data/data/com.termux/files/home/opencv-python/opencv/cmake/checks/cpu_neon_bf16.cpp'
+    check option: ''
+===== BUILD LOG =====
+Change Dir: '/data/data/com.termux/files/home/opencv-python/_skbuild/android-24-arm64_v8a-3.14/cmake-build/CMakeFiles/CMakeTmp'
+
+Run Build Command(s): /data/data/com.termux/files/usr/bin/ninja -v cmTC_1078e
+[1/2] /data/data/com.termux/files/usr/bin/c++   -O3 -DNDEBUG -std=c++11 -fPIE -MD -MT CMakeFiles/cmTC_1078e.dir/cpu_neon_bf16.cpp.o -MF CMakeFiles/cmTC_1078e.dir/cpu_neon_bf16.cpp.o.d -o CMakeFiles/cmTC_1078e.dir/cpu_neon_bf16.cpp.o -c /data/data/com.termux/files/home/opencv-python/opencv/cmake/checks/cpu_neon_bf16.cpp
+FAILED: [code=1] CMakeFiles/cmTC_1078e.dir/cpu_neon_bf16.cpp.o 
+/data/data/com.termux/files/usr/bin/c++   -O3 -DNDEBUG -std=c++11 -fPIE -MD -MT CMakeFiles/cmTC_1078e.dir/cpu_neon_bf16.cpp.o -MF CMakeFiles/cmTC_1078e.dir/cpu_neon_bf16.cpp.o.d -o CMakeFiles/cmTC_1078e.dir/cpu_neon_bf16.cpp.o -c /data/data/com.termux/files/home/opencv-python/opencv/cmake/checks/cpu_neon_bf16.cpp
+/data/data/com.termux/files/home/opencv-python/opencv/cmake/checks/cpu_neon_bf16.cpp:14:26: error: always_inline function 'vcvt_bf16_f32' requires target feature 'bf16', but would be inlined into function 'vld1q_as_bf16' that is compiled without support for 'bf16'
+   14 |     return vcombine_bf16(vcvt_bf16_f32(s0), vcvt_bf16_f32(s1));
+      |                          ^
+/data/data/com.termux/files/home/opencv-python/opencv/cmake/checks/cpu_neon_bf16.cpp:14:45: error: always_inline function 'vcvt_bf16_f32' requires target feature 'bf16', but would be inlined into function 'vld1q_as_bf16' that is compiled without support for 'bf16'
+   14 |     return vcombine_bf16(vcvt_bf16_f32(s0), vcvt_bf16_f32(s1));
+      |                                             ^
+/data/data/com.termux/files/home/opencv-python/opencv/cmake/checks/cpu_neon_bf16.cpp:14:12: error: always_inline function 'vcombine_bf16' requires target feature 'bf16', but would be inlined into function 'vld1q_as_bf16' that is compiled without support for 'bf16'
+   14 |     return vcombine_bf16(vcvt_bf16_f32(s0), vcvt_bf16_f32(s1));
+      |            ^
+3 errors generated.
+ninja: build stopped: subcommand failed.
+
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unknown .*option'
+    Output line: 'warning: unknown warning option '-Wno-maybe-uninitialized', did you mean '-Wno-uninitialized'? [-Wunknown-warning-option]'
+Compilation failed:
+    source file: '/data/data/com.termux/files/home/opencv-python/_skbuild/android-24-arm64_v8a-3.14/cmake-build/CMakeFiles/CMakeTmp/src.c'
+    check option: ' -Wno-maybe-uninitialized'
+===== BUILD LOG =====
+Change Dir: '/data/data/com.termux/files/home/opencv-python/_skbuild/android-24-arm64_v8a-3.14/cmake-build/CMakeFiles/CMakeTmp'
+
+Run Build Command(s): /data/data/com.termux/files/usr/bin/ninja -v cmTC_0ea1f
+[1/2] /data/data/com.termux/files/usr/bin/cc   -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Wstrict-prototypes -Winit-self -Wpointer-arith -Wsign-promo -Wuninitialized -Winconsistent-missing-override -Wno-delete-non-virtual-dtor -Wno-unnamed-type-template-args -Wno-comment -Wno-deprecated-enum-enum-conversion -Wno-deprecated-anon-enum-enum-conversion -fdiagnostics-show-option -Qunused-arguments  -fvisibility=hidden -fvisibility-inlines-hidden -Wno-unused-but-set-variable -Wno-missing-prototypes -Wno-missing-declarations -Wno-undef -Wno-unused -Wno-sign-compare -Wno-cast-align -Wno-shadow  -O3 -DNDEBUG  -DNDEBUG -fPIE    -Wno-maybe-uninitialized -MD -MT CMakeFiles/cmTC_0ea1f.dir/src.c.o -MF CMakeFiles/cmTC_0ea1f.dir/src.c.o.d -o CMakeFiles/cmTC_0ea1f.dir/src.c.o -c /data/data/com.termux/files/home/opencv-python/_skbuild/android-24-arm64_v8a-3.14/cmake-build/CMakeFiles/CMakeTmp/src.c
+warning: unknown warning option '-Wno-maybe-uninitialized'; did you mean '-Wno-uninitialized'? [-Wunknown-warning-option]
+/data/data/com.termux/files/home/opencv-python/_skbuild/android-24-arm64_v8a-3.14/cmake-build/CMakeFiles/CMakeTmp/src.c:1:8: warning: unknown pragma ignored [-Wunknown-pragmas]
+    1 | #pragma
+      |        ^
+2 warnings generated.
+[2/2] : && /data/data/com.termux/files/usr/bin/cc -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Wstrict-prototypes -Winit-self -Wpointer-arith -Wsign-promo -Wuninitialized -Winconsistent-missing-override -Wno-delete-non-virtual-dtor -Wno-unnamed-type-template-args -Wno-comment -Wno-deprecated-enum-enum-conversion -Wno-deprecated-anon-enum-enum-conversion -fdiagnostics-show-option -Qunused-arguments  -fvisibility=hidden -fvisibility-inlines-hidden -Wno-unused-but-set-variable -Wno-missing-prototypes -Wno-missing-declarations -Wno-undef -Wno-unused -Wno-sign-compare -Wno-cast-align -Wno-shadow  -O3 -DNDEBUG  -DNDEBUG -Wl,--as-needed -Wl,--no-undefined CMakeFiles/cmTC_0ea1f.dir/src.c.o -o cmTC_0ea1f   && :
+
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unknown .*option'
+    Output line: 'warning: unknown warning option '-Wno-stringop-overflow', did you mean '-Wno-shift-overflow'? [-Wunknown-warning-option]'
+Compilation failed:
+    source file: '/data/data/com.termux/files/home/opencv-python/_skbuild/android-24-arm64_v8a-3.14/cmake-build/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -Wno-stringop-overflow'
+===== BUILD LOG =====
+Change Dir: '/data/data/com.termux/files/home/opencv-python/_skbuild/android-24-arm64_v8a-3.14/cmake-build/CMakeFiles/CMakeTmp'
+
+Run Build Command(s): /data/data/com.termux/files/usr/bin/ninja -v cmTC_01467
+[1/2] /data/data/com.termux/files/usr/bin/c++   -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Wstrict-prototypes -Winit-self -Wpointer-arith -Wuninitialized -Wno-delete-non-virtual-dtor -Wno-unnamed-type-template-args -Wno-comment -Wno-deprecated-enum-enum-conversion -Wno-deprecated-anon-enum-enum-conversion -fdiagnostics-show-option -Qunused-arguments  -fvisibility=hidden -fvisibility-inlines-hidden -Wno-deprecated -Wno-missing-prototypes -Wno-missing-declarations -Wno-shadow -Wno-unused-parameter -Wno-unused-local-typedefs -Wno-sign-compare -Wno-sign-promo -Wno-undef -Wno-tautological-undefined-compare -Wno-ignored-qualifiers -Wno-extra -Wno-unused-function -Wno-unused-const-variable -Wno-shorten-64-to-32 -Wno-invalid-offsetof -Wno-enum-compare-switch -Wno-suggest-override -Wno-inconsistent-missing-override -Wno-implicit-fallthrough -Wno-array-bounds  -O3 -DNDEBUG  -DNDEBUG -std=c++11 -fPIE    -Wno-stringop-overflow -MD -MT CMakeFiles/cmTC_01467.dir/src.cxx.o -MF CMakeFiles/cmTC_01467.dir/src.cxx.o.d -o CMakeFiles/cmTC_01467.dir/src.cxx.o -c /data/data/com.termux/files/home/opencv-python/_skbuild/android-24-arm64_v8a-3.14/cmake-build/CMakeFiles/CMakeTmp/src.cxx
+warning: unknown warning option '-Wno-stringop-overflow'; did you mean '-Wno-shift-overflow'? [-Wunknown-warning-option]
+/data/data/com.termux/files/home/opencv-python/_skbuild/android-24-arm64_v8a-3.14/cmake-build/CMakeFiles/CMakeTmp/src.cxx:1:8: warning: unknown pragma ignored [-Wunknown-pragmas]
+    1 | #pragma
+      |        ^
+2 warnings generated.
+[2/2] : && /data/data/com.termux/files/usr/bin/c++ -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Wstrict-prototypes -Winit-self -Wpointer-arith -Wuninitialized -Wno-delete-non-virtual-dtor -Wno-unnamed-type-template-args -Wno-comment -Wno-deprecated-enum-enum-conversion -Wno-deprecated-anon-enum-enum-conversion -fdiagnostics-show-option -Qunused-arguments  -fvisibility=hidden -fvisibility-inlines-hidden -Wno-deprecated -Wno-missing-prototypes -Wno-missing-declarations -Wno-shadow -Wno-unused-parameter -Wno-unused-local-typedefs -Wno-sign-compare -Wno-sign-promo -Wno-undef -Wno-tautological-undefined-compare -Wno-ignored-qualifiers -Wno-extra -Wno-unused-function -Wno-unused-const-variable -Wno-shorten-64-to-32 -Wno-invalid-offsetof -Wno-enum-compare-switch -Wno-suggest-override -Wno-inconsistent-missing-override -Wno-implicit-fallthrough -Wno-array-bounds  -O3 -DNDEBUG  -DNDEBUG -Wl,--as-needed -Wl,--no-undefined CMakeFiles/cmTC_01467.dir/src.cxx.o -o cmTC_01467   && :
+
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unknown .*option'
+    Output line: 'warning: unknown warning option '-Wno-stringop-overread' [-Wunknown-warning-option]'
+Compilation failed:
+    source file: '/data/data/com.termux/files/home/opencv-python/_skbuild/android-24-arm64_v8a-3.14/cmake-build/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -Wno-stringop-overread'
+===== BUILD LOG =====
+Change Dir: '/data/data/com.termux/files/home/opencv-python/_skbuild/android-24-arm64_v8a-3.14/cmake-build/CMakeFiles/CMakeTmp'
+
+Run Build Command(s): /data/data/com.termux/files/usr/bin/ninja -v cmTC_ae5dd
+[1/2] /data/data/com.termux/files/usr/bin/c++   -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Wstrict-prototypes -Winit-self -Wpointer-arith -Wuninitialized -Wno-delete-non-virtual-dtor -Wno-unnamed-type-template-args -Wno-comment -Wno-deprecated-enum-enum-conversion -Wno-deprecated-anon-enum-enum-conversion -fdiagnostics-show-option -Qunused-arguments  -fvisibility=hidden -fvisibility-inlines-hidden -Wno-deprecated -Wno-missing-prototypes -Wno-missing-declarations -Wno-shadow -Wno-unused-parameter -Wno-unused-local-typedefs -Wno-sign-compare -Wno-sign-promo -Wno-undef -Wno-tautological-undefined-compare -Wno-ignored-qualifiers -Wno-extra -Wno-unused-function -Wno-unused-const-variable -Wno-shorten-64-to-32 -Wno-invalid-offsetof -Wno-enum-compare-switch -Wno-suggest-override -Wno-inconsistent-missing-override -Wno-implicit-fallthrough -Wno-array-bounds  -O3 -DNDEBUG  -DNDEBUG -std=c++11 -fPIE    -Wno-stringop-overread -MD -MT CMakeFiles/cmTC_ae5dd.dir/src.cxx.o -MF CMakeFiles/cmTC_ae5dd.dir/src.cxx.o.d -o CMakeFiles/cmTC_ae5dd.dir/src.cxx.o -c /data/data/com.termux/files/home/opencv-python/_skbuild/android-24-arm64_v8a-3.14/cmake-build/CMakeFiles/CMakeTmp/src.cxx
+warning: unknown warning option '-Wno-stringop-overread' [-Wunknown-warning-option]
+/data/data/com.termux/files/home/opencv-python/_skbuild/android-24-arm64_v8a-3.14/cmake-build/CMakeFiles/CMakeTmp/src.cxx:1:8: warning: unknown pragma ignored [-Wunknown-pragmas]
+    1 | #pragma
+      |        ^
+2 warnings generated.
+[2/2] : && /data/data/com.termux/files/usr/bin/c++ -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Wstrict-prototypes -Winit-self -Wpointer-arith -Wuninitialized -Wno-delete-non-virtual-dtor -Wno-unnamed-type-template-args -Wno-comment -Wno-deprecated-enum-enum-conversion -Wno-deprecated-anon-enum-enum-conversion -fdiagnostics-show-option -Qunused-arguments  -fvisibility=hidden -fvisibility-inlines-hidden -Wno-deprecated -Wno-missing-prototypes -Wno-missing-declarations -Wno-shadow -Wno-unused-parameter -Wno-unused-local-typedefs -Wno-sign-compare -Wno-sign-promo -Wno-undef -Wno-tautological-undefined-compare -Wno-ignored-qualifiers -Wno-extra -Wno-unused-function -Wno-unused-const-variable -Wno-shorten-64-to-32 -Wno-invalid-offsetof -Wno-enum-compare-switch -Wno-suggest-override -Wno-inconsistent-missing-override -Wno-implicit-fallthrough -Wno-array-bounds  -O3 -DNDEBUG  -DNDEBUG -Wl,--as-needed -Wl,--no-undefined CMakeFiles/cmTC_ae5dd.dir/src.cxx.o -o cmTC_ae5dd   && :
+
+
+===== END =====
+
